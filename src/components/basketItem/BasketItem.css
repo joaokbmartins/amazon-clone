@@ -1,0 +1,31 @@
+.basketItem {
+  display: flex;
+  flex-direction: row;
+  /* width: 300px; */
+  /* height: 100px; */
+  padding: 10px;
+  justify-content: left;
+  align-items: top;
+}
+
+.basketItem__info {
+  margin-left: 10px;
+}
+
+.basketItem > img {
+  display: flex;
+  width: 100px;
+  height: 100%;
+}
+
+.basketItem__rating {
+  display: flex;
+}
+
+.basketItem__info > button {
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
