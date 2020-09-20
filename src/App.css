@@ -1,0 +1,7 @@
+:root {
+  --color-button-primary: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  --color-button-secondary: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+  --color-border-primary: #a88734 #9c7e31 #846a29;
+  --color-border-secondary: #adb1b8 #a2a6ac #8d9096;
+  --color-border-shadow-secondary: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}

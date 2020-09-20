@@ -1,12 +1,19 @@
-// THE DATA LAYER
-
 export const initialState = {
   basket: [],
+  user: null,
 };
 
-const reducer = (state, action /*CRUD action*/) => {
-  // console.log("action: ", action);
+export const getBasketTotalValue = (basket) =>
+  basket?.reduce((amount, item) => item.price + amount, 0);
+
+const reducer = (state, action) => {
   switch (action.type) {
+    case "SET_USER":
+      console.log(action);
+      return {
+        ...state,
+        user: action.user,
+      };
     case "ADD_TO_BASKET":
       return {
         ...state,
@@ -14,19 +21,29 @@ const reducer = (state, action /*CRUD action*/) => {
       };
 
     case "REMOVE_FROM_BASKET":
-      let newBasket = [];
-      state.basket.map((_, i) => {
+      let actualBasket = state.basket;
+      let itemFound = false;
+      state.basket = [];
+      actualBasket.map((_, i) => {
         if (i !== action.index) {
-          newBasket = [...newBasket, state.basket[i]];
+          state.basket = [...state.basket, actualBasket[i]];
+        } else {
+          itemFound = true;
         }
       });
-      state.basket = newBasket;
+      if (!itemFound) {
+        console.log("Item index ", action.index, " not found, not deleted.");
+      }
       return {
         ...state,
         basket: [...state.basket],
       };
 
     default:
+      console.log(
+        "ACTION: ",
+        action.type ? action.type : "DEFAULT REDUCER OPTION"
+      );
       return state;
   }
 };
