@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Amazon - React Clone",
+  "name": "Amazon Fake Clone - Built with React. Challenge powered by channel Clever Programer, on youtube.",
   "icons": [
     {
       "src": "favicon.ico",

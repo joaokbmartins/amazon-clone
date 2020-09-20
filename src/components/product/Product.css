@@ -1,42 +1,89 @@
 .product {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  z-index: 1;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 10px;
-  padding: 20px;
-  width: 100%;
-  max-height: 400px;
-  min-width: 100px;
 }
 
-.product > img {
-  max-height: 200px;
+.product__topInfo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.product__image {
+  display: flex;
   width: 100%;
+  height: 160px;
+  max-width: 200px;
+  max-height: 275px;
+  background-color: rgba(255, 255, 255, 0.329);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.product__image > img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .product__rating {
+  bottom: 0;
+  width: 100%;
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.product__info {
-  /* width: 100%; */
-  height: 100%;
-  margin-bottom: 15px;
+.product__bottomInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
 }
 
 .product__price {
-  margin-top: 5px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.product > button {
-  background: #f0c14b;
+.product__addToBasketButton {
+  min-width: fit-content;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__addToBasketButton > button {
+  background: var(--color-button-primary);
   border: 1px solid;
-  margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
+  min-width: 150px;
+  min-height: 30px;
+  border-color: var(--color-border-primary);
   color: #111;
 }
