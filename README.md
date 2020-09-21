@@ -1,4 +1,4 @@
-#Amazon's ReactJS Clone
+# Amazon's ReactJS Clone
 
 This is my version of Amazon's Clone Challenge powered by Clever Programer, built with React JS.
 
